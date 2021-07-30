@@ -6,17 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kr.co.bepo.navigationcomponent.databinding.FragmentLoginBinding
+import androidx.navigation.fragment.navArgs
+import kr.co.bepo.navigationcomponent.databinding.FragmentWelcomeBinding
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
+class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
-    private lateinit var binding: FragmentLoginBinding
+    private val args: WelcomeFragmentArgs by navArgs()
+    private lateinit var binding: FragmentWelcomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentLoginBinding.inflate(inflater, container, false)
+    ): View = FragmentWelcomeBinding.inflate(inflater, container, false)
         .also { binding = it }
         .root
 
@@ -27,11 +29,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     }
 
     private fun initViews() = with(binding) {
-        buttonConfirm.setOnClickListener {
-            val username = editTextUsername.text.toString()
-            val password = editTextPassword.text.toString()
+        textViewUsername.text = args.username
+        textViewPassword.text = args.password
 
-            val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(username, password)
+        buttonOk.setOnClickListener {
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
             findNavController().navigate(action)
         }
     }
