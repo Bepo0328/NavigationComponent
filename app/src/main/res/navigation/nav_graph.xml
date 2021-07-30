@@ -40,7 +40,7 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="kr.co.bepo.navigationcomponent.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="{username}"
         tools:layout="@layout/fragment_welcome">
 
         <argument
