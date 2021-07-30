@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android App/NavigationComponent/app/src/main/res/drawable/ic_home.xml" value="0.384375" />
+        <entry key="..\:/Android App/NavigationComponent/app/src/main/res/drawable/ic_search.xml" value="0.384375" />
         <entry key="..\:/Android App/NavigationComponent/app/src/main/res/layout/activity_main.xml" value="0.36822916666666666" />
         <entry key="..\:/Android App/NavigationComponent/app/src/main/res/layout/fragment_home.xml" value="0.36822916666666666" />
+        <entry key="..\:/Android App/NavigationComponent/app/src/main/res/layout/fragment_login.xml" value="0.20364583333333333" />
       </map>
     </option>
   </component>
