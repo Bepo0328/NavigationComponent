@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="kr.co.bepo.navigationcomponent.HomeFragment"
-        android:label="Home"
+        android:label="@string/home"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -24,7 +24,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="kr.co.bepo.navigationcomponent.LoginFragment"
-        android:label="Login"
+        android:label="@string/login"
         tools:layout="@layout/fragment_login">
 
         <action
@@ -58,5 +58,25 @@
             app:popUpToInclusive="true" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="kr.co.bepo.navigationcomponent.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="kr.co.bepo.navigationcomponent.TermsFragment"
+        android:label="@string/terms_amp_conditions"
+        tools:layout="@layout/fragment_terms" />
+
+    <action
+        android:id="@+id/action_global_termsFragment"
+        app:destination="@id/termsFragment"
+        app:enterAnim="@anim/slide_in_top"
+        app:exitAnim="@anim/slide_out_bottom"
+        app:popEnterAnim="@anim/slide_in_bottom"
+        app:popExitAnim="@anim/slide_out_top" />
 
 </navigation>
